@@ -1,0 +1,25 @@
+{
+    "default_filament_colour": [
+        "#000000"
+    ],
+    "filament_extruder_variant": [
+        "Direct Drive Standard"
+    ],
+    "filament_notes": "TPU Geeetech negro 95A. Base: Generic TPU @BBL A1. 215 C validado en torre de temperatura; retraccion 0.4 mm para reducir hilos. Ajustar si cambia de bobina.",
+    "filament_settings_id": [
+        "A1 · Geeetech TPU Negro"
+    ],
+    "from": "User",
+    "inherits": "Generic TPU @BBL A1",
+    "name": "A1 · Geeetech TPU Negro",
+    "nozzle_temperature": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "215"
+    ],
+    "nozzle_temperature_range_high": [
+        "230"
+    ],
+    "version": "2.8.2.61"
+}

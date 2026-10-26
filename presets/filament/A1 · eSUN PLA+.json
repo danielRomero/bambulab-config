@@ -1,0 +1,43 @@
+{
+    "close_additional_fan_first_x_layers": [
+        "2"
+    ],
+    "close_fan_the_first_x_layers": [
+        "2"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
+    ],
+    "filament_extruder_variant": [
+        "Direct Drive Standard"
+    ],
+    "filament_max_volumetric_speed": [
+        "15"
+    ],
+    "filament_notes": "eSUN PLA+ ajustado para A1: 215 C, cama 65, flow 0.98, max vol 15 mm3/s. Base para los procesos Funcional / Decorativo / Miniatura.",
+    "filament_scarf_seam_type": [
+        "external"
+    ],
+    "filament_settings_id": [
+        "A1 · eSUN PLA+"
+    ],
+    "from": "User",
+    "inherits": "eSUN PLA+ @BBL A1",
+    "name": "A1 · eSUN PLA+",
+    "nozzle_temperature": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "215"
+    ],
+    "nozzle_temperature_range_high": [
+        "230"
+    ],
+    "nozzle_temperature_range_low": [
+        "200"
+    ],
+    "version": "2.8.2.61"
+}
