@@ -1,2 +1,5 @@
 # Metadata de Bambu Studio (se regenera al reimportar; no aporta a la config)
 *.info
+
+# Archivado histórico (backups antiguos, no se versionan)
+archive/
