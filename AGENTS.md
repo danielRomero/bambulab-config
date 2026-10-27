@@ -37,6 +37,7 @@
 - `pressure_advance` / `enable_pressure_advance` están marcados **"Useless for Bambu Printer"** (el slicer no los usa). El K (Flow Dynamics) es **por filamento** y se guarda como **PA profile en la memoria de la impresora** (`Calibration → Flow Dynamics → Manage Result`, o Device tab → AMS → PA Profile), **NO** en ficheros del slicer.
 - El PA profile se asocia al filamento por **marca + material (vendor/material)**, no por el `name` del preset. Renombrar el `name` (sin cambiar `inherits`) **no rompe** el enlace.
 - El K se pierde solo con: **factory reset** de la impresora, borrado manual en **Manage Result**, o el límite de **16 resultados por boquilla**. Bugs de visualización: si no aparece, abrir `Manage Result` fuerza la recarga.
+- El K se puede **re-crear a mano** en `Calibration → Flow Dynamics → Manage Result` tecleando el valor, sin recalibrar. API programable: no hay oficial; se usa MQTT (TLS 8883, `device/{serial}/request|report`), p. ej. `bambulan` ("set K-values"), `pybambu`, `bambu-rs`. ⚠️ Firmware A1 ≥ 01.05.00.00 bloquea escritura de terceros en cloud: hace falta LAN + Developer Mode (pierde nube).
 - El flow rate (`filament_flow_ratio`) vive en el JSON del filamento **y** en `BambuStudio.conf` (sección `calis`).
 - Fórmula Flow Rate: `nuevo = viejo × (100 + modifier) / 100`. Ej.: 0.98 × 1.05 = **1.029**.
 - Base IDs: eSUN PLA+ `GFSL03_05`; 0.20 Strength `GP080`; 0.12 Fine `GP077`; 0.08 Extra Fine `GP076`; 0.20 Standard `GP079`.
