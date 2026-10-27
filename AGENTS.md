@@ -53,7 +53,7 @@
 
 ## Calibración
 - eSUN: **K = 0.025** (impresora, por filamento) y **flow = 1.029** (filamento). Completado.
-- SUNLU: K medido = 0.02 (impresora, por filamento). Flow: pendiente.
+- SUNLU: **K = 0.02** (impresora, por filamento) y **flow = 0.98** (calibrado; resultado 0 → sin cambio). Completado.
 - TPU: temperatura validada (215 °C); flow sin calibrar.
 
 ## Mantenimiento (lubricación)
