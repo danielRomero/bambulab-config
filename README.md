@@ -17,7 +17,7 @@ bambu-config/
 ## Presets incluidos
 
 - Filamento: `A1 · eSUN PLA+`, `A1 · Geeetech TPU Negro`, `A1 · SUNLU PLA Calibrado`
-- Proceso: `A1 · eSUN PLA+ · Funcional`, `Decorativo`, `Miniatura 0.4`, `A1 · Geeetech TPU · Lento`
+- Proceso: `A1 · PLA · Funcional`, `A1 · PLA · Decorativo`, `A1 · PLA · Miniatura 0.4`, `A1 · TPU · Lento`
 
 ## Regla de oro
 
