@@ -11,6 +11,7 @@ bambu-config/
 │   └── process/         # 4 presets de proceso (cómo se imprime)
 ├── BambuStudio.conf     # config global + datos de calibración (flow ratio, …)
 ├── restore.sh           # restaura el repo a Bambu Studio
+├── CONTEXT.md           # contexto y decisiones para sesiones de IA
 └── README.md
 ```
 
