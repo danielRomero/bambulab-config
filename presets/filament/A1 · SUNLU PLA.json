@@ -2,7 +2,10 @@
     "filament_extruder_variant": [
         "Direct Drive Standard"
     ],
-    "filament_notes": "SUNLU PLA generico. Base: Generic PLA @BBL A1. Scarf seam activado para reducir la costura.",
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_notes": "SUNLU PLA generico. Base: Generic PLA @BBL A1. Scarf seam activado. Flow 0.98 (calibrado, sin cambio).",
     "filament_scarf_seam_type": [
         "external"
     ],
