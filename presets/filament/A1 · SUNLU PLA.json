@@ -7,11 +7,11 @@
         "external"
     ],
     "filament_settings_id": [
-        "A1 · SUNLU PLA Calibrado"
+        "A1 · SUNLU PLA"
     ],
     "from": "User",
     "inherits": "Generic PLA @BBL A1",
-    "name": "A1 · SUNLU PLA Calibrado",
+    "name": "A1 · SUNLU PLA",
     "nozzle_temperature": [
         "210"
     ],

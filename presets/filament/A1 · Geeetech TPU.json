@@ -7,11 +7,11 @@
     ],
     "filament_notes": "TPU Geeetech negro 95A. Base: Generic TPU @BBL A1. 215 C validado en torre de temperatura; retraccion 0.4 mm para reducir hilos. Ajustar si cambia de bobina.",
     "filament_settings_id": [
-        "A1 · Geeetech TPU Negro"
+        "A1 · Geeetech TPU"
     ],
     "from": "User",
     "inherits": "Generic TPU @BBL A1",
-    "name": "A1 · Geeetech TPU Negro",
+    "name": "A1 · Geeetech TPU",
     "nozzle_temperature": [
         "215"
     ],
