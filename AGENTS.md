@@ -34,7 +34,7 @@
 
 ## Claves técnicas aprendidas
 - `only_one_wall_top` es una clave **LEGACY** que Bambu 2.8 ignora; la real es **`top_one_wall_type`** con valores `not apply` / `all top` / `topmost`. Usamos `not apply` (= paredes completas en la cara superior).
-- `pressure_advance` / `enable_pressure_advance` están marcados **"Useless for Bambu Printer"**. El K (Flow Dynamics) vive en la **impresora**, no en ficheros.
+- `pressure_advance` / `enable_pressure_advance` están marcados **"Useless for Bambu Printer"** (el slicer no los usa). El K (Flow Dynamics) es **por filamento** pero se guarda en la **memoria de la impresora** (pestaña *Device* → *Manage Result* / PA profiles), **NO** en ficheros del slicer.
 - El flow rate (`filament_flow_ratio`) vive en el JSON del filamento **y** en `BambuStudio.conf` (sección `calis`).
 - Fórmula Flow Rate: `nuevo = viejo × (100 + modifier) / 100`. Ej.: 0.98 × 1.05 = **1.029**.
 - Base IDs: eSUN PLA+ `GFSL03_05`; 0.20 Strength `GP080`; 0.12 Fine `GP077`; 0.08 Extra Fine `GP076`; 0.20 Standard `GP079`.
@@ -49,8 +49,8 @@
 - Flujo acordado: **la IA mantiene el repo**; **el usuario importa por la UI** (y borra de la nube lo viejo vía `File → Batch Preset Management`).
 
 ## Calibración
-- eSUN: **K = 0.025** (impresora) y **flow = 1.029** (filamento). Completado.
-- SUNLU: K medido = 0.02 (la impresora guarda un único K, no por filamento). Flow: pendiente.
+- eSUN: **K = 0.025** (impresora, por filamento) y **flow = 1.029** (filamento). Completado.
+- SUNLU: K medido = 0.02 (impresora, por filamento). Flow: pendiente.
 - TPU: temperatura validada (215 °C); flow sin calibrar.
 
 ## Mantenimiento (lubricación)
