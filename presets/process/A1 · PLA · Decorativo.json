@@ -54,7 +54,6 @@
     "sparse_infill_speed": [
         "250"
     ],
-    "support_interface_pattern": "concentric",
     "top_surface_acceleration": [
         "1500"
     ],
