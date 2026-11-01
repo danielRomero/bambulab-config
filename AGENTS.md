@@ -16,6 +16,7 @@
 - **`BambuStudio.conf` NO se versiona** (`.gitignore`): contiene el `access_code` LAN y el número de serie de la impresora. Al publicar el repo se reescribió el historial para purgarlo.
   - Si falta tras un clone, no hay que hacer nada especial: Bambu Studio lo regenera al abrir. El código LAN de la A1 está en `Settings → LAN Only Mode` (3.ª página) y se introduce en *Device*; instrucciones completas en el `README.md`.
   - **A propósito se conserva una copia local en el repo** (`~/code/bambu-config/BambuStudio.conf`, ignorada por git) como **documentación del estado de la máquina**: filamentos del AMS, `calis`, última configuración. Se refresca con `cp` cuando interese y **nunca se commitea tal cual** (lleva `access_code` y serial). Si algún día se quiere publicar como documentación, habría que sanearla primero.
+  - **`archive/` también se conserva a propósito** (backup de los presets antiguos, anterior al renombrado). Está ignorado por git y **no hay que borrarlo**: no existe otra copia.
 - Los `.info` se regeneran al reimportar (ignorados en git).
 
 ## Convención de nombres
