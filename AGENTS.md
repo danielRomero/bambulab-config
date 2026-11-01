@@ -14,6 +14,7 @@
 - Ubicación: `~/code/bambu-config/` · remoto público: `github.com/danielRomero/bambulab-config`.
 - Contenido: `presets/filament/` (3 JSON), `presets/process/` (4 JSON), `AGENTS.md`, `README.md`.
 - **`BambuStudio.conf` NO se versiona** (`.gitignore`): contiene el `access_code` LAN y el número de serie de la impresora. Al publicar el repo se reescribió el historial para purgarlo.
+  - Si falta tras un clone, no hay que hacer nada especial: Bambu Studio lo regenera al abrir. El código LAN de la A1 está en `Settings → LAN Only Mode` (3.ª página) y se introduce en *Device*; instrucciones completas en el `README.md`.
 - Los `.info` se regeneran al reimportar (ignorados en git).
 
 ## Convención de nombres
