@@ -1,6 +1,6 @@
 # Configuración de Bambu Studio (Bambu Lab A1)
 
-Copia versionada (git) de toda la configuración del slicer.
+Presets del slicer versionados en git, listos para importar en Bambu Studio.
 
 ## Estructura
 
@@ -9,11 +9,13 @@ bambu-config/
 ├── presets/
 │   ├── filament/        # 3 presets de filamento (material)
 │   └── process/         # 4 presets de proceso (cómo se imprime)
-├── BambuStudio.conf     # config global + datos de calibración (flow ratio, …)
-├── restore.sh           # restaura el repo a Bambu Studio
 ├── AGENTS.md            # contexto y decisiones (auto-cargado por OpenCode)
 └── README.md
 ```
+
+> La configuración global (`BambuStudio.conf`) **no se versiona**: contiene el
+> código de acceso LAN y el número de serie de la impresora. Vive solo en
+> `~/.var/app/com.bambulab.BambuStudio/config/BambuStudio/`.
 
 ## Presets incluidos
 
@@ -22,7 +24,7 @@ bambu-config/
 
 ## Regla de oro
 
-**Bambu Studio debe estar CERRADO** antes de restaurar o copiar ficheros a su carpeta.
+**Bambu Studio debe estar CERRADO** antes de copiar ficheros a su carpeta.
 Si está abierto, al cerrar sobreescribe con lo que tiene en memoria.
 
 ## Reimportar presets (método normal)
@@ -32,30 +34,33 @@ Si está abierto, al cerrar sobreescribe con lo que tiene en memoria.
 3. Importa los 4 JSON de `presets/process/`.
 4. Responde **Yes to all**.
 
+Importar por la interfaz **sí** sincroniza con Bambu Cloud. Copiar ficheros a
+mano **no** lo hace (al reiniciar el slicer vuelven las versiones de la nube).
+
 ## Guardar cambios (cuando tocas algo en Bambu Studio)
 
-Con Bambu Studio cerrado, trae los ficheros al repo y haz commit:
+Con Bambu Studio cerrado, trae los JSON al repo:
 
 ```bash
-LIVE="$HOME/.var/app/com.bambulab.BambuStudio/config/BambuStudio/user/TU_ID"
-cp "$LIVE/filament/"*.json presets/filament/
-cp "$LIVE/process/"*.json  presets/process/
-cp "$HOME/.var/app/com.bambulab.BambuStudio/config/BambuStudio/BambuStudio.conf" .
+LIVE="$HOME/.var/app/com.bambulab.BambuStudio/config/BambuStudio"
+ID="$(ls "$LIVE/user" | head -1)"   # ID de tu cuenta de Bambu
+cp "$LIVE/user/$ID/filament/"*.json presets/filament/
+cp "$LIVE/user/$ID/process/"*.json  presets/process/
 git add -A && git commit -m "descripción del cambio"
 ```
 
-## Restaurar / volver al pasado
+## Volver a un estado anterior
 
 ```bash
-git log --oneline          # ver historial
-git checkout <commit> -- . # traer un estado anterior
-./restore.sh               # aplicarlo a Bambu Studio (cerrado)
+git log --oneline                 # ver historial
+git checkout <commit> -- presets/ # traer los presets de ese commit
 ```
+
+Después impórtalos de nuevo con `File → Import → Import Preset` (Yes to all).
 
 ## Notas
 
 - El **K de pressure advance (Flow Dynamics)** vive en la **impresora**, no en ficheros.
-- El **flow ratio (Flow Rate)** está en `BambuStudio.conf` (sección `calis`) y, tras calibrar,
-  también como `filament_flow_ratio` en el filamento eSUN.
+- El **flow ratio (Flow Rate)** está como `filament_flow_ratio` en el JSON del filamento.
 - No hay preset de máquina/impresora de usuario: la A1 usa el preset de sistema.
 - Los `.info` se regeneran al reimportar, por eso se ignoran en git.

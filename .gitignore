@@ -1,3 +1,7 @@
+# Config global del slicer: contiene el codigo de acceso LAN y el numero de serie
+# de la impresora. NUNCA versionar (el repo es publico).
+BambuStudio.conf
+
 # Metadata de Bambu Studio (se regenera al reimportar; no aporta a la config)
 *.info
 
